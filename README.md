@@ -6,7 +6,7 @@
 
 ---
 
-### 목차 
+## 목차 
 
 * [**React의 상태 관리와 문제점**](https://github.com/pshtony1/redux-practice/blob/master/README.md#react%EC%9D%98-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC%EC%99%80-%EB%AC%B8%EC%A0%9C%EC%A0%90)
   * [React의 상태 관리](https://github.com/pshtony1/redux-practice/blob/master/README.md#react%EC%9D%98-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC)
