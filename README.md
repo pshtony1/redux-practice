@@ -8,20 +8,20 @@
 
 ### 목차 
 
-* [**React의 상태 관리와 문제점**]()
-  * React의 상태 관리
-  * 그러나..
+* [**React의 상태 관리와 문제점**](https://github.com/pshtony1/redux-practice/blob/master/README.md#react%EC%9D%98-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC%EC%99%80-%EB%AC%B8%EC%A0%9C%EC%A0%90)
+  * [React의 상태 관리](https://github.com/pshtony1/redux-practice/blob/master/README.md#react%EC%9D%98-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC)
+  * [그러나..](https://github.com/pshtony1/redux-practice/blob/master/README.md#%EA%B7%B8%EB%9F%AC%EB%82%98)
   
 <br />
 
-* **다양한 상태 관리 방법**
+* [**다양한 상태 관리 방법**](https://github.com/pshtony1/redux-practice/blob/master/README.md#%EB%8B%A4%EC%96%91%ED%95%9C-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC-%EB%B0%A9%EB%B2%95)
 
 <br />
 
-* **Redux 란?**
-  * Flux Pattern
-  * 그래서 Redux를 왜 쓰는데?
-  * ❗ Redux는 React에만 사용되는 것이 아니다
+* [**Redux 란?**](https://github.com/pshtony1/redux-practice/blob/master/README.md#redux-%EB%9E%80)
+  * [Flux Pattern](https://github.com/pshtony1/redux-practice/blob/master/README.md#flux-pattern)
+  * [그래서 Redux를 왜 쓰는데?](https://github.com/pshtony1/redux-practice/blob/master/README.md#%EA%B7%B8%EB%9E%98%EC%84%9C-redux%EB%A5%BC-%EC%99%9C-%EC%93%B0%EB%8A%94%EB%8D%B0)
+  * [❗ Redux는 React에만 사용되는 것이 아니다](https://github.com/pshtony1/redux-practice/blob/master/README.md#%EA%B7%B8%EB%9E%98%EC%84%9C-redux%EB%A5%BC-%EC%99%9C-%EC%93%B0%EB%8A%94%EB%8D%B0)
 
 ---
 
