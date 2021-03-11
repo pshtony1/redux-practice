@@ -120,4 +120,26 @@
 
 ### 그래서 Redux를 왜 쓰는데?
 
+결국 앞서 설명했던 `Prop Drilling` 에서 발생하는 문제점들을 다음과 같이 개선한다.
 
+* 데이터/코드 흐름을 개선하는 예측 가능한 상태 관리
+* 불필요한 렌더링 억제
+
+<br />
+
+또한 중요한 기능으로, **상태의 중앙화**가 있다.
+
+> 상태를 전역적으로 저장하는 공간(`Store`)이 있어, 상태의 위치에 대한 고민을 하지 않아도 된다.
+
+<br />
+
+이 외에도, 읽기 전용 상태나 [Side-Effect](https://www.reddit.com/r/reactjs/comments/8avfej/what_does_side_effects_mean_in_react/)가 없는 `Reducer` 등 편리한 기능들을 제공한다.
+
+대박이다.😆
+
+<br />
+
+### ❗ Redux는 React에만 사용되는 것이 아니다
+
+무엇보다도 `Redux`는 `React` 전용 상태 관리 라이브러리가 아니다.  
+`React` 전용으로는 `Context API` 라는게 존재하며, `Redux`는 Vanilla Javascript, `Vue`, `Angular` 등에도 사용이 가능한 라이브러리이다.
