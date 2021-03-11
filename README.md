@@ -23,6 +23,7 @@
   * [그래서 Redux를 왜 쓰는데?](https://github.com/pshtony1/redux-practice/blob/master/README.md#%EA%B7%B8%EB%9E%98%EC%84%9C-redux%EB%A5%BC-%EC%99%9C-%EC%93%B0%EB%8A%94%EB%8D%B0)
   * [❗ Redux는 React에만 사용되는 것이 아니다](https://github.com/pshtony1/redux-practice/blob/master/README.md#%EA%B7%B8%EB%9E%98%EC%84%9C-redux%EB%A5%BC-%EC%99%9C-%EC%93%B0%EB%8A%94%EB%8D%B0)
 
+* 작성중
 ---
 
 <br />
