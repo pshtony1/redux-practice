@@ -39,7 +39,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    addTodo: (text) => dispatch(actionCreators.addTodo(text)),
+    addTodo: (text) =>
+      dispatch(actionCreators.addTodo({ text, createdAt: Date.now() })),
   };
 };
 

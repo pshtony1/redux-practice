@@ -6,10 +6,8 @@ import { actionCreators } from "../store";
 const Todo = ({ text, id, onBtnClick }) => {
   return (
     <li>
-      <Link to={`/${id}`}>
-        {text}
-        <button onClick={onBtnClick}>❌</button>
-      </Link>
+      <Link to={`/${id}`}>{text}</Link>
+      <button onClick={onBtnClick}>❌</button>
     </li>
   );
 };
@@ -17,7 +15,7 @@ const Todo = ({ text, id, onBtnClick }) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onBtnClick: () => {
-      dispatch(actionCreators.deleteTodo(ownProps.id));
+      dispatch(actionCreators.deleteTodo({ id: ownProps.id }));
     },
   };
 };
