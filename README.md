@@ -68,6 +68,8 @@
 
 <br />
 
+<br />
+
 ## 다양한 상태 관리 방법
 
 위의 문제를 해결하기 위해, 가장 보편적으로 사용하는 방법은 상태 관리 라이브러리를 사용하는 것이다.  
@@ -77,6 +79,8 @@
 
 나는 가장 많이 사용하는 `Redux`를 선택하여 공부해보기로 결정했다.  
 *(물론 다 공부할 것이긴 하지만..)*
+
+<br />
 
 <br />
 
@@ -156,3 +160,97 @@
 
 무엇보다도 `Redux`는 `React` 전용 상태 관리 라이브러리가 아니다.  
 `React` 전용으로는 `Context API` 라는게 존재하며, `Redux`는 Vanilla Javascript, `Vue`, `Angular` 등에도 사용이 가능한 라이브러리이다.
+
+<br />
+
+<br />
+
+## Redux 설치
+
+### npm
+```
+npm install redux --save-dev
+```
+
+### yarn
+```
+yarn add redux
+```
+
+<br />
+
+<br />
+
+## Vanilla Redux
+
+앞서 설명한대로, `Redux` 는 [`Flux Pattern`](https://github.com/pshtony1/redux-practice/blob/master/README.md#flux-pattern) 을 기반으로 동작하게끔 구조가 짜여있다.
+
+이를 기반으로, `Redux` 에서 사용하는 컨셉에 대한 용어를 정리했다.
+
+또한, Vanilla Redux 에서는 어떻게 `Redux`를 사용하는지 정리했다.
+
+<br />
+
+### 용어
+
+* **Store**
+  * **상태가 저장**되는 곳
+  * 상태를 관리하는 메서드(`dispatch`, `subscribe` 등)도 들어있다.
+  * 이를 이용해 상태의 중앙화(Centralize)가 가능하다.
+
+* **Action**
+  * **상태를 조작할 때 참조하는 객체**이다.
+  * `Action` 의 Type을 지정하여 `Reducer` 에서 어떻게 상태를 변화시킬지 지정할 수 있다.
+  * 또한, Type 뿐만아니라, `Reducer` 에 넘겨줄 값을 임의로 설정해줄 수 있다.
+  
+```js
+{
+  type: "CUSTOM_TYPE",
+  createdAt: Date.now(),
+  user: new User(),
+  ...
+}
+```
+
+* **Dispatcher**
+  * `Action` 을 `Reducer` 에게 전달해주는 역할이다.
+
+* **Reducer**
+  * 상태를 변화시키는 로직(함수)이다.
+  * **절대로 `Reducer` 내부에서 상태를 변화시키면 안된다. 변화된 새로운 상태를 return 해주는 것이 `Reducer` 의 역할**이다.
+
+* **Subscribe**
+  * 상태 변화가 감지되면 지정된 로직을 실행하는 컨셉이다.
+  * 일종의 이벤트 리스너 같은 녀석이다. 
+
+<br />
+
+### 코드 구조
+
+1. 👉 상태와 이를 관리할 메서드들이 저장된 `store` 를 만들어준다.
+
+```js
+import { createStore } from "redux";
+
+const store = createStore();
+```
+
+2. 👉 `createStore()` 함수에 인자로 `Reducer` 를 넘겨준다.
+
+> 기본적으로 `Reducer` 는 두 가지 인자를 받는다.
+> * 현재 상태 값
+> * `Action`
+
+```js
+import { createStore } from "redux";
+
+const reducer = () => {};  // 미완성 reducer
+
+const store = createStore(reducer);
+```
+
+2-a. 기본적으로 `Reducer` 는 두 가지 인자를 받는다.
+
+* 현재 상태 값
+
+* Action
