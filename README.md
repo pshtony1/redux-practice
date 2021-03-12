@@ -239,18 +239,24 @@ const store = createStore();
 
 > 기본적으로 `Reducer` 는 두 가지 인자를 받는다.
 > * 현재 상태 값
-> * `Action`
+> * `Dispatcher` 로부터 전달받은 `Action`
 
 ```js
 import { createStore } from "redux";
 
-const reducer = () => {};  // 미완성 reducer
+const reducer = (state = [], action) => {
+  switch (action.type) {
+    case "TYPE_0":
+      return [...state, 0];
+     
+    case "TYPE_1":
+      return [...state, 1];
+      
+    default:
+      return state;
+  }
+};
 
 const store = createStore(reducer);
 ```
 
-2-a. 기본적으로 `Reducer` 는 두 가지 인자를 받는다.
-
-* 현재 상태 값
-
-* Action
