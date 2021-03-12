@@ -235,6 +235,8 @@ import { createStore } from "redux";
 const store = createStore();
 ```
 
+<br />
+
 2. 👉 `createStore()` 함수에 인자로 `Reducer` 를 넘겨준다.
 
 > 기본적으로 `Reducer` 는 두 가지 인자를 받는다.
@@ -244,19 +246,102 @@ const store = createStore();
 ```js
 import { createStore } from "redux";
 
-const reducer = (state = [], action) => {
+const reducer = (state = false, action) => {
   switch (action.type) {
-    case "TYPE_0":
-      return [...state, 0];
-     
-    case "TYPE_1":
-      return [...state, 1];
+    case "LOADED":
+      return true;
       
     default:
-      return state;
+      return false;
   }
 };
 
 const store = createStore(reducer);
 ```
 
+<br />
+
+3. 👉 `dispatch()` 메서드를 이용하여 특정 `Action` 을 전달하는 `Dispatcher` 를 만들어준다.
+
+```js
+import { createStore } from "redux";
+
+const reducer = (state = false, action) => {
+  switch (action.type) {
+    case "LOADED":
+      return true;
+      
+    default:
+      return false;
+  }
+};
+
+const store = createStore(reducer);
+
+window.onload = () => {
+  store.dispatch({ type: "LOADED" })
+}
+```
+
+<br />
+
+4. 👉 `subscribe()` 메서드를 이용하여 상태 변화를 감지할 수 있다.
+
+```js
+import { createStore } from "redux";
+
+const reducer = (state = false, action) => {
+  switch (action.type) {
+    case "LOADED":
+      return true;
+      
+    default:
+      return false;
+  }
+};
+
+const store = createStore(reducer);
+
+window.onload = () => {
+  store.dispatch({ type: "LOADED" })
+}
+
+store.subscribe(() => {
+  console.log("State Changed!");
+});
+```
+
+<br />
+
+5. 👉 `getState()` 메서드를 이용하여 현재 상태를 가져올 수 있다.
+
+```js
+import { createStore } from "redux";
+
+const reducer = (state = false, action) => {
+  switch (action.type) {
+    case "LOADED":
+      return true;
+      
+    default:
+      return false;
+  }
+};
+
+const store = createStore(reducer);
+
+window.onload = () => {
+  store.dispatch({ type: "LOADED" })
+}
+
+store.subscribe(() => {
+  const isLoaded = state.getState();
+  
+  if (isLoaded) {
+    disableLoader();
+    renderHome();
+  }
+});
+```
+
+최고다 😀. 난잡하게 될 수 있던 코드 흐름을 단방향으로 꽉 잡아주는 느낌이 강하게 든다.
