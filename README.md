@@ -15,6 +15,10 @@
   * [Flux Pattern](https://github.com/pshtony1/redux-practice/blob/master/README.md#flux-pattern)
   * [그래서 Redux를 왜 쓰는데?](https://github.com/pshtony1/redux-practice/blob/master/README.md#%EA%B7%B8%EB%9E%98%EC%84%9C-redux%EB%A5%BC-%EC%99%9C-%EC%93%B0%EB%8A%94%EB%8D%B0)
   * [❗ Redux는 React에만 사용되는 것이 아니다](https://github.com/pshtony1/redux-practice/blob/master/README.md#%EA%B7%B8%EB%9E%98%EC%84%9C-redux%EB%A5%BC-%EC%99%9C-%EC%93%B0%EB%8A%94%EB%8D%B0)
+* [**Redux 설치**](https://github.com/pshtony1/redux-practice#redux-%EC%84%A4%EC%B9%98)
+* [**Vanilla Redux**](https://github.com/pshtony1/redux-practice#vanilla-redux)
+  * [**용어**](https://github.com/pshtony1/redux-practice#%EC%9A%A9%EC%96%B4)
+  * [**코드 구조**](https://github.com/pshtony1/redux-practice#%EC%BD%94%EB%93%9C-%EA%B5%AC%EC%A1%B0)
 
 * 작성중
 ---
